@@ -1,0 +1,7 @@
+@EndUserText.label: 'Travel Service Binding'
+@AbapCatalog.extensibility.extensible: true
+define service ZSD_YASH_TRAVEL_M {
+  expose ZC_BD_TRAVEL_M;
+  expose ZC_BD_BOOKING_M;
+  expose ZC_BD_BOOKING_SUPPL_M;
+}

@@ -55,10 +55,10 @@ annotate view ZC_BD_BOOKING_M with
   @UI.identification: [{ position: 50 }]
   @Consumption.valueHelpDefinition: [{ entity: {
                                                   name: '/DMO/I_Flight',
-                                                 element: 'ConnectionId'
+                                                 element: 'ConnectionID'
                                                 },
-      additionalBinding: [{ element: 'ConnectionId' , 
-                            localElement: 'ConnectionID'},
+      additionalBinding: [{ element: 'ConnectionID' , 
+                            localElement: 'ConnectionId'},
                           { element: 'AirlineID' , 
                             localElement: 'CarrierId'},   
                           { element: 'CurrencyCode' , 

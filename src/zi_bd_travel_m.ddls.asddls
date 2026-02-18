@@ -8,7 +8,7 @@
     dataClass: #MIXED
 }
 define root view entity ZI_BD_Travel_M
-  as select from /dmo/travel_m as Travel
+  as select from ztravel_yash_m as Travel
   composition [0..*] of ZI_BD_Booking_M          as _Booking
   association [0..1] to /DMO/I_Agency            as _Agency        on $projection.AgencyId = _Agency.AgencyID
   association [0..1] to /DMO/I_Customer          as _Customer      on $projection.CustomerId = _Customer.CustomerID

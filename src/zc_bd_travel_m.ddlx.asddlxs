@@ -28,8 +28,7 @@ annotate view ZC_BD_TRAVEL_M with
   }
   ]
 
-  @UI.lineItem: [{ position: 10 },
-                 { type:#FOR_ACTION, dataAction: 'copyTravel', label: 'Copy Travel' }]
+  @UI.lineItem: [{ position: 10 }]
   @UI.identification: [{ position: 10 }]
   @Search.defaultSearchElement: true
   TravelId;

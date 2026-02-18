@@ -8,7 +8,7 @@
     dataClass: #MIXED
 }
 define view entity ZI_BD_Booking_M
-  as select from /dmo/booking_m
+  as select from zyash_booking_m
   association        to parent ZI_BD_Travel_M         as _Travel            on  $projection.TravelId = _Travel.TravelId
   composition [0..*] of ZI_BD_Booking_Suppl_M         as _BookingSuppliment
   association [0..1] to /DMO/I_Customer               as _Customer          on  $projection.CustomerId = _Customer.CustomerID
