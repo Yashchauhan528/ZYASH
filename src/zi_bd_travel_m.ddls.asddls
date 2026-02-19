@@ -30,6 +30,7 @@ define root view entity ZI_BD_Travel_M
       created_by      as CreatedBy,
       created_at      as CreatedAt,
       last_changed_by as LastChangedBy,
+      @Semantics.systemDateTime.localInstanceLastChangedAt: true // this will be used as ETag 
       last_changed_at as LastChangedAt,
       _Booking,
       _Agency,

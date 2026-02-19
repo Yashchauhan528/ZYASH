@@ -6,12 +6,13 @@ implementation in class zcl_bp_i_yash_travel_m unique
 persistent table ztravel_yash_m
 lock master
 authorization master ( instance )
-//etag master <field_name>
+etag master LastChangedAt
+early numbering
 {
   create ( authorization : global );
   update;
   delete;
-  field ( mandatory ) TravelId;
+  field ( readonly ) TravelId;
   association _Booking { create; }
 
   mapping for ztravel_yash_m
@@ -38,8 +39,9 @@ implementation in class zcl_bp_i_yash_booking_m unique
 persistent table zyash_booking_m
 lock dependent by _Travel
 authorization dependent by _Travel
-//etag master <field_name>
+etag master LastChangedAt
 {
+
   update;
   delete;
   field ( readonly ) TravelId, BookingId;
@@ -67,7 +69,7 @@ implementation in class zcl_bp_i_yash_booksuppl_m unique
 persistent table zbooksupl_yash_m
 lock dependent by _Travel
 authorization dependent by _Travel
-//etag master <field_name>
+etag master LastChangedAt
 {
   update;
   delete;
