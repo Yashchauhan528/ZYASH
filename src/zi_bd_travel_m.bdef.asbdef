@@ -9,12 +9,12 @@ authorization master ( instance )
 etag master LastChangedAt
 early numbering
 {
+  field ( readonly ) TravelId;
   create ( authorization : global );
   update;
   delete;
-  field ( readonly ) TravelId;
-  association _Booking { create; }
 
+  association _Booking { create; }
   mapping for ztravel_yash_m
     {
       TravelId      = travel_id;
@@ -40,11 +40,11 @@ persistent table zyash_booking_m
 lock dependent by _Travel
 authorization dependent by _Travel
 etag master LastChangedAt
+early numbering
 {
-
+  field ( readonly ) TravelId, BookingId;
   update;
   delete;
-  field ( readonly ) TravelId, BookingId;
   association _Travel;
   association _BookingSuppliment { create; }
 
@@ -70,6 +70,7 @@ persistent table zbooksupl_yash_m
 lock dependent by _Travel
 authorization dependent by _Travel
 etag master LastChangedAt
+early numbering
 {
   update;
   delete;

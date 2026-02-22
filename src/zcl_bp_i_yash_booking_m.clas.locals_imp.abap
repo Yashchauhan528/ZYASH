@@ -1,0 +1,20 @@
+CLASS lhc_zi_bd_booking_m DEFINITION INHERITING FROM cl_abap_behavior_handler.
+
+  PRIVATE SECTION.
+
+    METHODS earlynumbering_cba_Bookingsupp FOR NUMBERING
+      IMPORTING entities FOR CREATE ZI_BD_Booking_M\_Bookingsuppliment.
+
+ENDCLASS.
+
+CLASS lhc_zi_bd_booking_m IMPLEMENTATION.
+
+  METHOD earlynumbering_cba_Bookingsupp.
+
+  ENDMETHOD.
+
+ENDCLASS.
+
+*"* use this source file for the definition and implementation of
+*"* local helper classes, interface definitions and type
+*"* declarations
